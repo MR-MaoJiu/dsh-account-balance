@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "账户余额",
+    "description": "在输入框下方状态栏展示 DeepSeek 账户余额，点击可查看详情。"
+  }
+}

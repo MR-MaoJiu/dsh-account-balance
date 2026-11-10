@@ -1,0 +1,54 @@
+{
+  "name": "@local/account-balance",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "在 DeepSeek Harness 状态栏实时展示账户余额，点击展开详情",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "bundle",
+    "balance",
+    "account"
+  ],
+  "author": "MR-MaoJiu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MR-MaoJiu/dsh-account-balance.git"
+  },
+  "homepage": "https://github.com/MR-MaoJiu/dsh-account-balance#readme",
+  "bugs": {
+    "url": "https://github.com/MR-MaoJiu/dsh-account-balance/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/en.json": "./locale/en.json",
+    "./locale/zh.json": "./locale/zh.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

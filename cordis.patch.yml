@@ -1,0 +1,4 @@
+# 将本插件插入到桌面 profile 的插件组合中
+- insert:
+    - id: account-balance
+      name: '@local/account-balance'

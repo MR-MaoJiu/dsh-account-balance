@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Account balance",
+    "description": "Shows the DeepSeek account balance in the composer status bar and opens a details panel on click."
+  }
+}
