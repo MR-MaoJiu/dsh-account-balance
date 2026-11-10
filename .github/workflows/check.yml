@@ -1,0 +1,21 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: JavaScript 语法
+        run: node --check client.js && node --check index.js
+      - name: 清单与语言包 JSON
+        run: node -e "for (const f of ['package.json','locale/zh.json','locale/en.json']) { JSON.parse(require('fs').readFileSync(f,'utf8')); console.log('ok', f) }"
+      - name: bundle 必备字段
+        run: node -e "const p=require('./package.json'); const miss=[]; if(!p.dsh||!p.dsh.bundle||!p.dsh.bundle.patch) miss.push('dsh.bundle.patch'); if(!p.dsh||!p.dsh.client||p.dsh.client.platform!=='web') miss.push('dsh.client.platform'); for(const f of p.files||[]) if(!require('fs').existsSync(f)) miss.push('missing '+f); if(miss.length){console.error('缺少:',miss); process.exit(1)} console.log('manifest ok')"
