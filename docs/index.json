@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "title": {
+    "en": "MR-MaoJiu DSH plugins",
+    "zh": "MR-MaoJiu 的 DSH 插件"
+  },
+  "description": {
+    "en": "Plugins for DeepSeek Harness by MR-MaoJiu.",
+    "zh": "MR-MaoJiu 的 DeepSeek Harness 插件。"
+  },
+  "metadata": {
+    "categories": {
+      "usage": {
+        "title": {
+          "en": "Usage and account",
+          "zh": "用量与账户"
+        }
+      }
+    },
+    "labels": {},
+    "sortKeys": {}
+  },
+  "plugins": [
+    {
+      "name": "@local/account-balance",
+      "title": {
+        "en": "Account balance",
+        "zh": "账户余额"
+      },
+      "description": {
+        "en": "Shows the DeepSeek account balance in the composer status row and expands details on click.",
+        "zh": "在输入框下方状态栏实时显示 DeepSeek 账户余额，点击展开详情。"
+      },
+      "icon": "icon-180.png",
+      "author": "MR-MaoJiu",
+      "homepage": "https://github.com/MR-MaoJiu/dsh-account-balance#readme",
+      "repository": {
+        "url": "https://github.com/MR-MaoJiu/dsh-account-balance"
+      },
+      "metadata": {
+        "category": "usage",
+        "keywords": [
+          "balance",
+          "account",
+          "usage"
+        ],
+        "labels": [],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1794300720,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/MR-MaoJiu/dsh-account-balance",
+            "commit": "f18c8fc2b81149d528c58bf144ea3a315889e1e5"
+          },
+          "engines": {
+            "dsh": ">=0.2.0"
+          }
+        }
+      ]
+    }
+  ]
+}
